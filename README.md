@@ -1,102 +1,102 @@
-# Proyecto de Automatización con Playwright
+# Playwright Automation Framework
 
-Este proyecto implementa un framework de automatización de pruebas utilizando Playwright y TypeScript, siguiendo el patrón Page Object Model (POM).
+This project implements a test automation framework using Playwright and TypeScript, following the Page Object Model (POM) pattern.
 
-## Características
+## Features
 
-- Soporte para múltiples entornos (dev, staging, prod)
-- Manejo de credenciales temporales usando dotenv
-- Organización bajo el patrón Page Object Model (POM)
-- Utilidades comunes reutilizables
-- Tests independientes organizados
-- Generación de reportes HTML
-- Ejecución configurable por entorno
+- Support for multiple environments (dev, staging, prod)
+- Temporary credentials management using dotenv
+- Organization under the Page Object Model (POM) pattern
+- Reusable common utilities
+- Organized independent tests
+- HTML report generation
+- Configurable execution by environment
 
-## Estructura del Proyecto
+## Project Structure
 
 ```
 ├── config/
-│   └── environments/           # Archivos de configuración por entorno
+│   └── environments/           # Environment configuration files
 │       ├── .env.dev
 │       ├── .env.staging
 │       └── .env.prod
-├── report/                     # Reportes y capturas de pantalla
+├── report/                     # Reports and screenshots
 │   ├── screenshots/
 │   └── test-results/
 ├── src/
-│   ├── config/                 # Configuraciones adicionales
-│   ├── fixtures/               # Fixtures de Playwright
+│   ├── config/                 # Additional configurations
+│   ├── fixtures/               # Playwright fixtures
 │   ├── pages/                  # Page Objects
 │   │   ├── base-page.ts
 │   │   ├── login-page.ts
 │   │   └── dashboard-page.ts
 │   ├── tests/                  # Tests
 │   │   └── login.spec.ts
-│   └── utils/                  # Utilidades
+│   └── utils/                  # Utilities
 │       ├── common-utils.ts
-│       └── environment/        # Manejo de variables de entorno
-├── .env.example                # Plantilla de variables de entorno
+│       └── environment/        # Environment variables management
+├── .env.example                # Environment variables template
 ├── package.json
-├── playwright.config.ts        # Configuración de Playwright
+├── playwright.config.ts        # Playwright configuration
 └── README.md
 ```
 
-## Requisitos Previos
+## Prerequisites
 
-- Node.js 14 o superior
-- npm o yarn
+- Node.js 14 or higher
+- npm or yarn
 
-## Instalación
+## Installation
 
 ```bash
-# Instalar dependencias
+# Install dependencies
 npm install
 
-# Instalar los navegadores de Playwright
+# Install Playwright browsers
 npx playwright install
 ```
 
-## Configuración
+## Configuration
 
-1. Copia el archivo `.env.example` a un nuevo archivo `.env` en la raíz del proyecto.
-2. Configura las variables según tus necesidades.
+1. Copy the `.env.example` file to a new `.env` file in the project root.
+2. Configure the variables according to your needs.
 
-## Ejecución de Tests
+## Running Tests
 
 ```bash
-# Ejecutar todos los tests con el entorno predeterminado
+# Run all tests with the default environment
 npm test
 
-# Ejecutar tests en un entorno específico
+# Run tests in a specific environment
 npm run test:dev
 npm run test:staging
 npm run test:prod
 
-# Ejecutar tests con la interfaz gráfica
+# Run tests with the UI
 npm run test:ui
 
-# Ver el reporte de los tests
+# View the test report
 npm run report
 ```
 
-## Generación de Código
+## Code Generation
 
 ```bash
-# Iniciar la herramienta de generación de código
+# Start the code generation tool
 npm run codegen
 ```
 
-## Convenciones de Código
+## Code Conventions
 
-- Seguir principios SOLID
-- Métodos pequeños y con un solo propósito
-- Usar Page Objects para encapsular interacciones con la UI
-- Mantener los tests independientes entre sí
-- Evitar hardcodear datos de prueba
+- Follow SOLID principles
+- Small methods with a single purpose
+- Use Page Objects to encapsulate UI interactions
+- Keep tests independent from each other
+- Avoid hardcoding test data
 
-## Contribución
+## Contribution
 
-1. Crea un nuevo branch para tu feature o fix
-2. Implementa tus cambios
-3. Asegúrate de que todos los tests pasen
-4. Crea un Pull Request
+1. Create a new branch for your feature or fix
+2. Implement your changes
+3. Make sure all tests pass
+4. Create a Pull Request
