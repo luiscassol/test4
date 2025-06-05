@@ -1,0 +1,23 @@
+{
+  "name": "test4",
+  "version": "1.0.0",
+  "description": "Proyecto de automatización con Playwright usando POM",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:dev": "ENV=dev npx playwright test",
+    "test:staging": "ENV=staging npx playwright test",
+    "test:prod": "ENV=prod npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "report": "npx playwright show-report report",
+    "codegen": "npx playwright codegen"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.29",
+    "dotenv": "^16.5.0"
+  }
+}
